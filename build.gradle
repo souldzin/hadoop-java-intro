@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    id 'application'
+}
+
+mainClassName = "WordCount"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version: '2.4.1'
+    compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.4.1'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.2'
+}
+
+compileJava {
+    sourceCompatibility = '1.7'
+    targetCompatibility = '1.7'
+}
